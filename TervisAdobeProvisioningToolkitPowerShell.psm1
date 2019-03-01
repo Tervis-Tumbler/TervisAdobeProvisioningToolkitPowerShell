@@ -3,12 +3,12 @@ function Invoke-TervisAdobeProvisioningToolkitSerializeInDesignServer {
     Select-Object -ExpandProperty Password
 
     Set-AdobeProvisioningToolkitAdobe_PRTKFilePath -Path "\\tervis.prv\applications\installers\Adobe\Adobe Provisioning Toolkit Enterprise Edition\adobe_prtk.exe"
-    Invoke-AdobeProvisioningToolkitSerializeGenerate -LicensingIdentifier "V7{}InDesignServer-14-Win-GM" -SerialNumber $SerialNumber -ProvisioningXMLFilePath $HOME\prov.xml
+    Invoke-AdobeProvisioningToolkitSerializeGenerate -LicensingIdentifier "V7{}InDesignServer-14-Win-GM" -SerialNumber $SerialNumber -ProvisioningXMLFilePath $Home
 }
 
 function Get-TervisAdobeProvisioningToolkitSerializeInDesignServerProvisioningXML {
     param (
         $OutPath
     )
-    Get-PasswordstateDocument -DocumentID 54 -OutFile "$OutPath\prov.xml" -DocumentLocation password
+    Get-PasswordstateDocument -DocumentID 55 -OutFile "$OutPath\prov.xml" -DocumentLocation password
 }
